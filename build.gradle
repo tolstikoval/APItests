@@ -1,0 +1,17 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'io.rest-assured:rest-assured:4.0.0'
+    implementation 'org.testng:testng:7.3.0'
+    // compile 'com.github.scribejava:scribejava-core:4.1.2'
+    // implementation 'io.github.openunirest:unirest-java:2.5.03'
+}
+
+test {
+    useTestNG()
+}
