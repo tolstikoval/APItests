@@ -1,0 +1,6 @@
+post/request/PostRequest.java
+ post.request.PostRequest
+post/response/PostResponse.java
+ post.response.PostResponse
+post/PostsMethods.java
+ post.PostsMethods

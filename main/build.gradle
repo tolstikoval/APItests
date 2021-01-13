@@ -1,24 +1,16 @@
 apply plugin: 'java'
 apply plugin: 'application'
-//plugins {
-  //  id 'java'
-//}
-
-//version 'unspecified'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-   //testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
-   // testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
     implementation 'org.testng:testng:7.3.0'
     testImplementation 'io.rest-assured:rest-assured:4.3.3'
     implementation 'io.github.openunirest:unirest-java:2.5.03'
 }
 
 test {
-   // useJUnitPlatform()
     useTestNG()
 }

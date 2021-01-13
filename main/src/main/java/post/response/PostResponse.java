@@ -1,7 +1,10 @@
 package post.response;
 
+import java.util.UUID;
+
 public class PostResponse {
-  String  title;
-  String  body;
-  int     userId;
+  private String  title;
+  private String  body;
+  private int  userId;
+  private UUID id;
 }
