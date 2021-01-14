@@ -3,6 +3,26 @@ package post.request;
 public class PostRequest {
 
   String body;
+  long userId;
+  String title;
+
+  public String getBody() {
+    return body;
+  }
+
+  public void setBody(String body) {
+    this.body = body;
+    return this;
+  }
+
+  public String getTitle() {
+    return title;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
+    return this;
+  }
 
   public long getUserId() {
     return userId;
@@ -13,24 +33,14 @@ public class PostRequest {
     return this;
   }
 
-  long userId;
-  String title;
-
-  public static void main(String[] args) {
-    PostRequest postRequest = new PostRequest();
-    postRequest = postRequest.buildPostRequest();
-    System.out.println(postRequest.title);
-    System.out.println(postRequest.body);
-    System.out.println(postRequest.userId);
-  }
   public PostRequest buildPostRequest() {
-    this.title = "title for test " + setTitle(6);
-    this.body = "foo";
-    this.userId = 1;
+    this.title = setTitle("title for test " + generateTitle(6));
+    this.body = setBody("foo");
+    this.userId = setUserId(1);
     return this;
   }
 
-  private String setTitle(int n) {
+  private String generate(int n) {
     String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "0123456789" + "abcdefghijklmnopqrstuvxyz";
     StringBuilder sb = new StringBuilder(n);
 
@@ -40,4 +50,11 @@ public class PostRequest {
     }
     return sb.toString();
   }
+  /*  public static void main(String[] args) {
+    PostRequest postRequest = new PostRequest();
+    postRequest = postRequest.buildPostRequest();
+    System.out.println(postRequest.title);
+    System.out.println(postRequest.body);
+    System.out.println(postRequest.userId);
+  }*/
 }
